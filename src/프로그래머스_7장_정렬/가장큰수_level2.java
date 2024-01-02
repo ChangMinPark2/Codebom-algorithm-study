@@ -14,6 +14,6 @@ public class 가장큰수_level2 {
                     return reverse - origin;
                 })
                 .collect(Collectors.joining(""))
-                .replaceAll("^0+", "0");
+                .replaceAll("^0+", "0"); // {0, 0, 0} 일 경우 -> 0으로 치환해해준다
     }
 }
