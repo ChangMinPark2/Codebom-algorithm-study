@@ -1,6 +1,6 @@
 package 프로그래머스_3장_이차원배열;
 
-public class 행렬의곱셈 {
+public class 행렬의곱셈_Level2 {
     public int[][] solution(int[][] arr1, int[][] arr2) {
         int[][] answer = new int[arr1.length][arr2[0].length];
 
