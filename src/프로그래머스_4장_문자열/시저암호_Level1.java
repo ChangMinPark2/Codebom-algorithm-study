@@ -1,7 +1,7 @@
 package 프로그래머스_4장_문자열;
 
 //ab,1 -> bc 출력
-public class 시저암호 {
+public class 시저암호_Level1 {
     public static String solution(String s, int n) {
         StringBuilder sb = new StringBuilder();
 
