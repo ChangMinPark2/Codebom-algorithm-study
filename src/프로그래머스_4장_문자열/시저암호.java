@@ -1,4 +1,4 @@
-package 프로그래머스_7장_정렬;
+package 프로그래머스_4장_문자열;
 
 //ab,1 -> bc 출력
 public class 시저암호 {
