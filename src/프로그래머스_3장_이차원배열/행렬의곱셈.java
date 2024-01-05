@@ -1,4 +1,4 @@
-package 프로그래머스_7장_정렬;
+package 프로그래머스_3장_이차원배열;
 
 public class 행렬의곱셈 {
     public int[][] solution(int[][] arr1, int[][] arr2) {
