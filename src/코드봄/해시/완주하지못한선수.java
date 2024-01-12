@@ -21,7 +21,7 @@ public class 완주하지못한선수 {
         }
 
         return map.entrySet().stream()
-                .filter(entry -> entry.getValue() != 0)
+                .filter(o -> o.getValue() != 0)
                 .map(Map.Entry::getKey)
                 .collect(Collectors.joining(""));
     }
