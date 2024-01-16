@@ -1,7 +1,7 @@
 package 프로그래머스_11장_자주등장하는자료구조;
 
 import java.util.*;
-public class 주식가격 {
+public class 주식가격_Level2 {
     public int[] solution(int[] prices) {
         Stack<Integer> stack = new Stack<>();
         int[] answer = new int[prices.length];
