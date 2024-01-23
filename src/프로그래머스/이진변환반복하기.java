@@ -19,10 +19,8 @@ public class 이진변환반복하기 {
     }
 
     private int zeroCount(String s) {
-        int count = 0;
-        for(char c : s.toCharArray()){
-            if(c == '0') count++;
-        }
-        return count;
+        return (int) s.chars()
+                .filter(i -> i == '0')
+                .count();
     }
 }
