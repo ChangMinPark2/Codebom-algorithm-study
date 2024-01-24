@@ -9,24 +9,28 @@ import java.util.Arrays;
  < 작은 부분 문제부터 해결하기 >
  **/
 public class 피보나치수_Level2 {
-    private int[] mem = new int[100001];
+    private static int[] mem = new int[100001];
 
-    public int solution(int n) {
+    public static int solution(int n) {
 
         Arrays.fill(mem, -1);
 
         for(int i = 0; i <= n; i++) {
-            fib(n);
+            fib(i);
         }
         return fib(n);
     }
 
-    private int fib(int n) {
+    private static int fib(int n) {
         if(mem[n] != -1) return mem[n];
         if(n == 1 || n == 0) {
             return n;
         }
 
         return mem[n] = (fib(n-1) + fib(n-2)) % 1234567;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(solution(100000));
     }
 }
