@@ -14,13 +14,13 @@ import java.util.*;
  */
 public class 디스크컨트롤러 {
 
-    public int solution(int[][] jobs) {
+    public static int solution(int[][] jobs) {
         Arrays.sort(jobs, (o1, o2) -> o1[0] - o2[0]);
         PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> o1[1] - o2[1]);
 
         int sum = 0; // 최종 합
         int count = 0; // 작업 수
-        int standard = 0; // 요청 시간
+        int standard = 0; // 요청 시간 2
         int index = 0;
 
         while (count < jobs.length) {
@@ -41,5 +41,10 @@ public class 디스크컨트롤러 {
         }
         System.out.println(sum);
         return sum / jobs.length;
+    }
+
+    public static void main(String[] args) {
+        int[][] jobs = {{1, 10}, {10, 1}};
+        System.out.println(solution(jobs));
     }
 }
