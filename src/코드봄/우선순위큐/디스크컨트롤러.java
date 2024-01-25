@@ -18,25 +18,25 @@ public class 디스크컨트롤러 {
         Arrays.sort(jobs, (o1, o2) -> o1[0] - o2[0]);
         PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> o1[1] - o2[1]);
 
-        int sum = 0;
-        int count = 0;
+        int sum = 0; // 최종 합
+        int count = 0; // 작업 수
+        int standard = 0; // 요청 시간
         int index = 0;
-        int endTime = 0;
 
         while (count < jobs.length) {
 
-            while (index < jobs.length && jobs[index][0] <= endTime) {
+            while (index < jobs.length && jobs[index][0] <= standard) {
                 pq.add(jobs[index]);
                 index++;
             }
 
             if (!pq.isEmpty()) {
-                int[] arr = pq.poll();
-                sum += endTime - arr[0] + arr[1];
-                endTime += arr[1];
+                int[] arr = pq.poll(); // 요청시간이 들어왔고, 수행시간이 가장 낮은 작업.
+                sum += standard - arr[0] + arr[1];
+                standard += arr[1];
                 count++;
             } else {
-                endTime = jobs[index][0];
+                standard = jobs[index][0];
             }
         }
         System.out.println(sum);
