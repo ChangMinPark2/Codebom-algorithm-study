@@ -12,20 +12,20 @@ public class 게임맵최단거리_BFS {
         n = maps.length;
         m = maps[0].length;
         visited = new boolean[n][m];
-        bfs(0, 0, maps);
+        bfs(maps);
 
         return !visited[n - 1][m - 1] ? -1 : count;
     }
 
-    static void bfs(int a, int b, int[][] maps) {
+    static void bfs(int[][] maps) {
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{0, 0, 1});
         visited[0][0] = true;
 
         while (!queue.isEmpty()) {
             int[] repo = queue.remove();
-            a = repo[0];
-            b = repo[1];
+            int a = repo[0];
+            int b = repo[1];
             count = repo[2];
             if (a == n - 1 && b == m - 1) {
                 break;
