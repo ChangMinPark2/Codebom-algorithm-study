@@ -35,16 +35,16 @@ public class 게임맵최단거리_BFS {
                 int X = a + dx[i];
                 int Y = b + dy[i];
 
-                if (0 > X || X >= n || 0 > Y || Y >= m) {
-                    continue;
-                }
-
-                if (!visited[X][Y] && maps[X][Y] == 1) {
+                if (isCheck(X, Y) && !visited[X][Y] && maps[X][Y] == 1) {
                     visited[X][Y] = true;
                     queue.add(new int[]{X, Y, count + 1});
                 }
             }
         }
+    }
+
+    private static boolean isCheck(int X, int Y) {
+        return X >= 0 && X < n && Y >= 0 && Y < m;
     }
 
 
