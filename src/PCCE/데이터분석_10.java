@@ -32,7 +32,7 @@ public class 데이터분석_10 {
         int index = 0;
 
         while (!pq.isEmpty()) {
-            result[index++] = pq.poll();
+            result[index++] = pq.remove();
         }
         return result;
     }
