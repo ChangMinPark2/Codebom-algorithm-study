@@ -24,8 +24,8 @@ public class 데이터분석_10 {
 
         PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> o1[nSort] - o2[nSort]);
 
-        for (int[] ar : data) {
-            if (ar[nExt] < val_ext) pq.add(ar);
+        for (int[] arr : data) {
+            if (arr[nExt] < val_ext) pq.add(arr);
         }
 
         int[][] result = new int[pq.size()][];
