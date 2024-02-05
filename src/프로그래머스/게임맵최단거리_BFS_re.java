@@ -28,7 +28,7 @@ public class 게임맵최단거리_BFS_re {
             int x = arr[1];
             count = arr[2];
 
-            if (y == n - 1 && x == m - 1) break;
+            if (y == n - 1 && x == m - 1) break; //목적지 도착 종료조건.
 
             for (int i = 0; i < 4; i++) {
                 int ny = y + dy[i];
