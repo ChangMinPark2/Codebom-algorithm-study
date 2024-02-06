@@ -32,13 +32,13 @@ public class 숨바꼭질 {
                 return standard[1];
             }
 
-            isCheck(standard[0] - 1, standard[1]);
-            isCheck(standard[0] + 1, standard[1]);
-            isCheck(standard[0] * 2, standard[1]);
+            Check(standard[0] - 1, standard[1]);
+            Check(standard[0] + 1, standard[1]);
+            Check(standard[0] * 2, standard[1]);
         }
         return 0;
     }
-    private static void isCheck(int x, int y) {
+    private static void Check(int x, int y) {
         if (x >= 0 && x <= 100000 && !visited[x]) {
             q.add(new int[] {x, y + 1});
             visited[x] = true;
