@@ -4,7 +4,7 @@ import java.util.*;
 import java.io.*;
 public class 깊이우선탐색1_Re {
     static int vertex, edge, start, count = 1;
-    static List<Integer>[] graph;
+    static List<List<Integer>> graph = new ArrayList<>();
 
     static int[] visited;
 
@@ -15,11 +15,11 @@ public class 깊이우선탐색1_Re {
         vertex = Integer.parseInt(repo[0]);
         edge = Integer.parseInt(repo[1]);
         start = Integer.parseInt(repo[2]);
-        graph = new ArrayList[vertex + 1];
+
         visited = new int[vertex + 1];
 
-        for (int i = 1; i <= vertex; i++) {
-            graph[i] = new ArrayList<>();
+        for (int i = 0; i <= vertex; i++) {
+            graph.add(new ArrayList<>());
         }
 
         for (int i = 0; i < edge; i++) {
@@ -27,12 +27,12 @@ public class 깊이우선탐색1_Re {
             int a = Integer.parseInt(repo[0]);
             int b = Integer.parseInt(repo[1]);
 
-            graph[a].add(b);
-            graph[b].add(a);
+            graph.get(a).add(b);
+            graph.get(b).add(a);
         }
 
         for (int i = 1; i <= vertex; i++) {
-            Collections.sort(graph[i]);
+            Collections.sort(graph.get(i));
         }
         dfs(start);
 
@@ -45,8 +45,8 @@ public class 깊이우선탐색1_Re {
     static void dfs(int start) {
         visited[start] = count++;
 
-        for (int i = 0; i < graph[start].size(); i++) {
-            int next = graph[start].get(i);
+        for (int i = 0; i < graph.get(start).size(); i++) {
+            int next = graph.get(start).get(i);
             if (visited[next] == 0) {
                 dfs(next);
             }
