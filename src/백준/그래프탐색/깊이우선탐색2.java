@@ -1,4 +1,4 @@
-package 백준;
+package 백준.그래프탐색;
 
 import java.util.*;
 import java.io.*;

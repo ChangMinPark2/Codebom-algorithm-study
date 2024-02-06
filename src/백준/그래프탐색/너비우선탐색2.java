@@ -1,4 +1,4 @@
-package 백준;
+package 백준.그래프탐색;
 import java.io.*;
 import java.util.*;
 public class 너비우선탐색2 {
