@@ -11,20 +11,21 @@ import java.util.*;
  * <문제풀이조건>
  * 최솟값 구하는 문제
  * <위, 아래> name을 순회하여 위 아래 중 구할 수 있는 최솟값 += 한다.
- * <좌, 우> 오른쪽으로 쭉 가기. 왼쪽 갔다가 오른쪽으로 가기. 오른쪽 갔다가 왼쪽 가기.
+ * <좌, 우>
+ * 1. 오른쪽으로 쭉 가기. == 왼쪽으로 죽 가기 true
+ * 2. 왼쪽 갔다가 오른쪽으로 가기.
+ * 3. 오른쪽 갔다가 왼쪽 가기.
  **/
 
 public class 조이스틱 {
     static int count;
 
     public static int solution(String name) {
-        for (char c : name.toCharArray()) {
-            bfs(c);
-        }
-
         int min = name.length() - 1;
 
         for (int i = 0; i < name.length(); i++) {
+            bfs(name.charAt(i));
+
             if (i < name.length() - 1 && name.charAt(i + 1) == 'A') {
                 int endA = i + 1;
                 while (endA < name.length() && name.charAt(endA) == 'A')
