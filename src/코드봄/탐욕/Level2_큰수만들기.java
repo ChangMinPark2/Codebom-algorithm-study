@@ -1,8 +1,9 @@
 package 코드봄.탐욕;
 /**
  * <문제풀이흐름>
- * 1. number를 인트배열로 내림차순하여 정렬한다.
- * 2. k까지 숫자를 리턴한다.
+ * 1. 스택에 있는 값이, 다음 값보다 작으면 pop 한다. (k만큼 뺴줘야 하니 k--)
+ * 2. 스택이 비어있으면 push 한다.
+ * 3. 스택 값 순서대로 출력.
  **/
 
 import java.util.*;
@@ -26,8 +27,8 @@ public class Level2_큰수만들기 {
     }
 
     public static String solution2(String number, int k) {
-        char[] result = new char[number.length() - k];
-        Stack<Character> stack = new Stack<>();
+        ArrayDeque<Character> stack = new ArrayDeque<>();
+        StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < number.length(); i++) {
             char c = number.charAt(i);
@@ -38,10 +39,11 @@ public class Level2_큰수만들기 {
             stack.push(c);
         }
 
-        for (int i = 0; i < result.length; i++) {
-            result[i] = stack.get(i);
+        while (!stack.isEmpty()) {
+            sb.append(stack.pop());
         }
-        return new String(result);
+
+        return sb.reverse().toString();
     }
 
     public static void main(String[] args) {
