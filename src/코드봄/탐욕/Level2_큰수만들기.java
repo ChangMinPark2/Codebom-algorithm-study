@@ -39,6 +39,8 @@ public class Level2_큰수만들기 {
             stack.push(c);
         }
 
+        while (k-- != 0) stack.pop();
+
         while (!stack.isEmpty()) {
             sb.append(stack.pop());
         }
