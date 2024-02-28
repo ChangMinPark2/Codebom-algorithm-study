@@ -41,7 +41,6 @@ public class Level3_N으로표현 {
             }
         }
 
-
         return answer;
     }
 
