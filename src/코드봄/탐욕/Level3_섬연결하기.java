@@ -33,7 +33,8 @@ public class Level3_섬연결하기 {
     static void union (int from, int to) {
         from = find(from);
         to = find(to);
-        if (from != to) parents[to] = from;
+        if (from < to) parents[to] = from;
+        else parents[from] = to;
     }
 
     public static void main(String[] args) {
