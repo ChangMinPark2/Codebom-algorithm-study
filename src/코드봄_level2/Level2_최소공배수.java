@@ -17,8 +17,4 @@ public class Level2_최소공배수 {
         return max (b, (a % b));
     }
 
-    public static void main(String[] args) {
-        System.out.println(7 % 2);
-        System.out.println(max(2, 7));
-    }
 }
