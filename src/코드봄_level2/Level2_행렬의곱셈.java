@@ -1,6 +1,6 @@
 package 코드봄_level2;
 
-public class 행렬의곱셈 {
+public class Level2_행렬의곱셈 {
 	public int[][] solution(int[][] arr1, int[][] arr2) {
 		int[][] answer = new int[arr1.length][arr2[0].length];
 
