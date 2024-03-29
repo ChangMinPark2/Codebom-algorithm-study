@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * 캐시의 크기가 0이라면, 전부 5이다. 5 * 도시의 크기 리턴
+ * 카카오 코딩태스트 문제 이해 LTS
  */
 public class Level2_1차캐시 {
 	public int solution(int cacheSize, String[] cities) {
