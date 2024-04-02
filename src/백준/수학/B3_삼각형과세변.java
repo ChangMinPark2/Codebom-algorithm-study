@@ -1,39 +1,54 @@
 package 백준.수학;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Deque;
-import java.util.List;
-import java.util.stream.IntStream;
+import java.io.*;
+import java.util.*;
+
+/**
+ * 세 변의 길이가 모두 같은 경우 -> E ~~
+ * 두 변의 길이만 같은 경우 -> Isoscel
+ * 세 변의 길이가 모두 다른 경우 -> Scalene
+ */
 
 public class B3_삼각형과세변 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		List<String> list = new ArrayList<>();
-
-		for (int i = 0; i < 5; i++) {
+		while (true) {
 			String[] repo = br.readLine().split(" ");
 			int a = Integer.parseInt(repo[0]);
 			int b = Integer.parseInt(repo[1]);
 			int c = Integer.parseInt(repo[2]);
 
-			if (a + b <= c || a + c <= b || b + c <= a) {
-				list.add("Invalid");
-			} else if (a == b && b == c) {
-				list.add("Equilateral");
-			} else if (a == b || a == c || b == c) {
-				list.add("Isosceles");
-			} else {
-				list.add("Scalene");
+			if (a == b && b == c && a == c && a == 0) {
+				break;
 			}
+
+			if (isNotTriangle(a, b, c)) {
+				list.add("Invalid");
+				continue;
+			}
+
+			if (a == b && b == c) {
+				list.add("Equilateral");
+				continue;
+			} else if (a == b || b == c || a == c) {
+				list.add("Isosceles");
+			} else
+				list.add("Scalene");
 		}
 
-		for (int i = 0; i < list.size() - 1; i++) {
-			System.out.println(list.get(i));
+		for (String str : list) {
+			System.out.println(str);
 		}
+	}
+
+	private static boolean isNotTriangle(int a, int b, int c) {
+		int max = Math.max(a, Math.max(b, c));
+		if (max == a) {
+			return b + c <= a;
+		} else if (max == b) {
+			return a + c <= b;
+		} else
+			return a + b <= c;
 	}
 }
