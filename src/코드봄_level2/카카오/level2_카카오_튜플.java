@@ -2,7 +2,7 @@ package 코드봄_level2.카카오;
 
 import java.util.*;
 
-public class 카카오level2_튜플 {
+public class level2_카카오_튜플 {
 	public int[] solution(String s) {
 		s = s.replace("{{", "");
 		s = s.replace("}}", "");
@@ -24,5 +24,9 @@ public class 카카오level2_튜플 {
 			}
 		}
 		return list.stream().mapToInt(Integer::intValue).toArray();
+	}
+
+	public static void main(String[] args) {
+
 	}
 }
