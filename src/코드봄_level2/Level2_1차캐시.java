@@ -1,5 +1,7 @@
 package 코드봄_level2;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 /**
@@ -34,5 +36,16 @@ public class Level2_1차캐시 {
 		}
 
 		return answer;
+	}
+
+	public static void main(String[] args) {
+
+		LocalDateTime localDateTime = LocalDateTime.now();
+
+		String localDateTimeFormat2 = localDateTime.format(
+			DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
+		);
+		System.out.println("test");
+		System.out.println(localDateTimeFormat2);
 	}
 }
