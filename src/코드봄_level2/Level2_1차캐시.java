@@ -48,4 +48,5 @@ public class Level2_1차캐시 {
 		System.out.println("test");
 		System.out.println(localDateTimeFormat2);
 	}
+
 }
