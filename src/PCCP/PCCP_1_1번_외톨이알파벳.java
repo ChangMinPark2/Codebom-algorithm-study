@@ -7,6 +7,7 @@ import java.util.*;
 public class PCCP_1_1번_외톨이알파벳 {
 	public String solution(String input_string) {
 		Set<String> set = new HashSet<>();
+		StringBuilder sb = new StringBuilder();
 
 		for(int i = 0; i < input_string.length(); i++) {
 			char c = input_string.charAt(i);
@@ -26,8 +27,6 @@ public class PCCP_1_1번_외톨이알파벳 {
 
 		String[] answer = set.toArray(new String[0]);
 		Arrays.sort(answer);
-
-		StringBuilder sb = new StringBuilder();
 
 		for(String s : answer) {
 			sb.append(s);
