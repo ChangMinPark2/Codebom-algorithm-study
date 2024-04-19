@@ -6,9 +6,8 @@ import java.util.*;
 
 public class PCCP_1_1번_외톨이알파벳 {
 	public String solution(String input_string) {
-		Set<String> set = new HashSet<>();
+		Set<String> set = new TreeSet<>();
 		StringBuilder sb = new StringBuilder();
-		PriorityQueue<String> pq = new PriorityQueue<>();
 
 		for(int i = 0; i < input_string.length(); i++) {
 			char c = input_string.charAt(i);
@@ -19,7 +18,6 @@ public class PCCP_1_1번_외톨이알파벳 {
 
 					if(temp.contains(String.valueOf(c))){
 						set.add(String.valueOf(c));
-						pq.add(String.valueOf(c));
 					}
 				}
 			}
@@ -28,10 +26,8 @@ public class PCCP_1_1번_외톨이알파벳 {
 		if(set.isEmpty()) return "N";
 
 		String[] answer = set.toArray(new String[0]);
-		Arrays.sort(answer);
-
-		while (!pq.isEmpty()) {
-			sb.append(pq.remove());
+		for (String str : answer) {
+			sb.append(str);
 		}
 
 		return sb.toString();
