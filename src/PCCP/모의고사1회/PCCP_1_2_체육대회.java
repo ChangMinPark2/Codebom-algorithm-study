@@ -1,4 +1,4 @@
-package PCCP;
+package PCCP.모의고사1회;
 
 public class PCCP_1_2_체육대회 {
 	public int solution(int[][] ability) {
