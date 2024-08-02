@@ -40,7 +40,7 @@ public class G5_1759 {
             int two = 0;
 
             for (String s : map) {
-                if (s.contains("a") || s.contains("e") || s.contains("i") || s.contains("o") || s.contains("u")) {
+                if (s.equals("a") || s.equals("e") || s.equals("i") || s.equals("o") || s.equals("u")) {
                     one++;
                 } else two++;
             }
