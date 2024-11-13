@@ -40,7 +40,7 @@ public class S1_4883 {
                     mem[i][2] += Math.min(mem[i][1], Math.min(mem[i - 1][1], mem[i - 1][2]));
                 }
             }
-            System.out.println(1 + ". " + mem[n - 1][1]);
+            System.out.println(tc + ". " + mem[n - 1][1]);
         }
     }
 }
