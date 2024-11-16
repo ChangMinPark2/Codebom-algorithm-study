@@ -17,9 +17,36 @@ import java.io.InputStreamReader;
  *
  */
 public class G5_16987 {
+    static int max = Integer.MIN_VALUE;
+    static int[] weight;
+    static int[] next;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] repo = br.readLine().split(" ");
+        int n = Integer.parseInt(br.readLine());
+        weight = new int[n];
+        next = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            String[] repo = br.readLine().split(" ");
+            int a = Integer.parseInt(repo[0]);
+            int b = Integer.parseInt(repo[1]);
+
+            next[i] = a;
+            weight[i] = b;
+        }
+
+        dfs(n, 0, 0);
+    }
+
+    static void dfs(int n, int depth, int count) {
+        if (n == depth) {
+
+        }
+
+        for (int i = 0; i < n; i++) {
+
+        }
 
     }
 }
