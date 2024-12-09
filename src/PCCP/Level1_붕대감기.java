@@ -22,16 +22,12 @@ public class Level1_붕대감기 {
         int lastTime = attacks[attacks.length - 1][0];
         int keepTime = 0;
         int curhealth = health;
-
-        Map<Integer, Integer> monster = new HashMap<>();
-
-        for (int[] arr : attacks) {
-            monster.put(arr[0], arr[1]);
-        }
+        int index = 0;
 
         for (int i = 1; i <= lastTime; i++) {
-            if (monster.containsKey(i)) {
-                curhealth -= monster.get(i);
+            if (i == attacks[index][0]) {
+                curhealth -= attacks[index][1];
+                index++;
                 keepTime = 0;
             } else {
                 curhealth += bandage[1];
