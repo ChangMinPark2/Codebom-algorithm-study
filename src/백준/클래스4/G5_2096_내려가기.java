@@ -3,7 +3,6 @@ package 백준.클래스4;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 /**
  * n <= 10만, (정렬, 이분탐색)
@@ -18,7 +17,7 @@ import java.util.Arrays;
  * 4 + 9, 9 + 9, 0 + 9
  * 누적합 하면 될듯? dp
  */
-public class G5_2096 {
+public class G5_2096_내려가기 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
