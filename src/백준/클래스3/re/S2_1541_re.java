@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 
 import java.util.*;
 
-public class S2_1541 {
+public class S2_1541_re {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         List<Integer> list = new ArrayList<>();
