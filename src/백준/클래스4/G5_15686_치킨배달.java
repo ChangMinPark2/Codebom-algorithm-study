@@ -75,9 +75,11 @@ public class G5_15686_치킨배달 {
 
         // 탐색
         for (int i = start; i < chicken.size(); i++) {
-            visited[i] = true;
-            dfs(depth + 1, i + 1);
-            visited[i] = false;
+            if (!visited[i]) {
+                visited[i] = true;
+                dfs(depth + 1, i + 1);
+                visited[i] = false;
+            }
         }
     }
 }
