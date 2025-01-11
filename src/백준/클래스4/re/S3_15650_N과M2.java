@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class S3_15650 {
+public class S3_15650_N과M2 {
     static int n, m;
     static int[] arr;
     static StringBuilder sb = new StringBuilder();
