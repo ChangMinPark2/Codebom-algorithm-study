@@ -4,6 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 1 < n, m <= 8
+ * 백트래킹
+ */
 public class S3_15650_N과M2 {
     static int n, m;
     static int[] arr;
