@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
  *  <=8 백
  *  사전순 증가, 중복허용 x
  */
-public class S2_15666_N과M122 {
+public class S2_15650_N과M22 {
     static int n, m;
     static int[] arr;
     static StringBuilder sb = new StringBuilder();
