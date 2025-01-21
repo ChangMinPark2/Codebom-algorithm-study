@@ -14,7 +14,6 @@ import java.io.InputStreamReader;
  */
 public class G5_12865_평범한배낭 {
     static int n, k;
-    static int[][] mem;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
