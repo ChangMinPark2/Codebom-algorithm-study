@@ -1,7 +1,7 @@
-package softeer.level2;
+package softeer.level3;
 import java.io.*;
-import java.util.*;
-public class lv2_택배마스터광우 {
+
+public class lv3_택배마스터광우 {
 
     static int n, m, k;
     static int[] arr;
