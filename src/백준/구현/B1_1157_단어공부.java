@@ -17,17 +17,17 @@ public class B1_1157_단어공부 {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
 
-        int min = 0;
+        int max = 0;
 
         for(char key : map.keySet()) {
-            min = Math.max(map.get(key), min);
+            max = Math.max(map.get(key), max);
         }
 
         int stand = 0;
         char c = ' ';
 
         for (char key : map.keySet()) {
-            if (map.get(key) == min) {
+            if (map.get(key) == max) {
                 c = key;
                 stand++;
             }
