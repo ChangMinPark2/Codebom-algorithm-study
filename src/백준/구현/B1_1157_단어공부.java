@@ -17,22 +17,18 @@ public class B1_1157_단어공부 {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
 
-        int max = 0;
-
-        for(char key : map.keySet()) {
-            max = Math.max(map.get(key), max);
-        }
-
-        int stand = 0;
+        int stand = -1;
         char c = ' ';
 
         for (char key : map.keySet()) {
-            if (map.get(key) == max) {
+            if (map.get(key) > stand) {
+                stand = map.get(key);
                 c = key;
-                stand++;
+            } else if (map.get(key) == stand) {
+                c = '?';
             }
         }
 
-        System.out.println(stand == 1 ? c : "?");
+        System.out.println(c);
     }
 }
