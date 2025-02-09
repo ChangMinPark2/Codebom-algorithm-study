@@ -12,10 +12,11 @@ public class S2_11055 {
         int[] arr = Arrays.stream(br.readLine().split(" "))
                 .mapToInt(Integer::parseInt)
                 .toArray();
-        int answer = 0;
+
         int[] mem = new int[n + 1];
 
         mem[0] = arr[0];
+        int answer = arr[0];
 
         for (int i = 1; i < n; i++) {
             mem[i] = arr[i];
