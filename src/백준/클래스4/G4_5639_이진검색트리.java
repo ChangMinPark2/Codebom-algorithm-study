@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class G4_5639_이진검색트리 {
+    static StringBuilder sb = new StringBuilder();
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Node root = new Node(Integer.parseInt(br.readLine()));
@@ -17,6 +19,7 @@ public class G4_5639_이진검색트리 {
         }
 
         postOrder(root);
+        System.out.println(sb);
     }
 
     public static class Node {
@@ -58,6 +61,6 @@ public class G4_5639_이진검색트리 {
 
         postOrder(node.left);
         postOrder(node.right);
-        System.out.println(node.number);
+        sb.append(node.number).append("\n");
     }
 }
