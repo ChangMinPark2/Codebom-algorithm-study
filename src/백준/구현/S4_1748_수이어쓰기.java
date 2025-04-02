@@ -20,6 +20,5 @@ public class S4_1748_수이어쓰기 {
 
             answer += plus;
         }
-        System.out.println(answer);
     }
 }
